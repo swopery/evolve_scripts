@@ -14,7 +14,7 @@ input_list = []
 pairing_dict = {}
 
 for i in input_file:
-    input_list.append(i.strip()) #chomp newline chars from input_file
+    input_list.append(i.rstrip()) #chomp newline chars from input_file
     
 with open(ip_lookup, 'rb') as csvfile:
     filereader = csv.reader(csvfile)
@@ -26,7 +26,7 @@ with open(ip_lookup, 'rb') as csvfile:
 
 for line in input_list:
     words = line.split() #for multiple ips on one line, split 
-    output = [] #used for initializing AND clearing list        
+    output = [] #used for initializing AND clearing list   
     for ip in words:
         test = regex.match(ip)
         if test:
@@ -35,4 +35,8 @@ for line in input_list:
                 output.append(ip.replace(ip,host)) 
             else:
                 output.append(ip) #returns ip as is if not found
+        else:
+            #This is hit when there is not a match based on the IP            
+            output.append(ip)
     print(' '.join(output))
+                
