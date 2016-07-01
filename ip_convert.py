@@ -5,9 +5,10 @@ Created on Tue Jun 28 13:40:43 2016
 
 @author: Ryan Swope - Evolve IP
 """
-import sys, csv, re
-    
-ip_lookup = "List-Of-IPs.csv"
+import sys, csv, re, os
+
+DIR = os.path.dirname(os.path.realpath(__file__))    
+ip_lookup = DIR + "/List-Of-IPs.csv"
 regex = re.compile("\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}")
 input_file = sys.stdin.readlines() #handles stdin
 input_list = []
