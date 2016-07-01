@@ -34,9 +34,8 @@ for line in input_list:
                 host = pairing_dict[ip]
                 output.append(ip.replace(ip,host)) 
             else:
-                output.append(ip) #returns ip as is if not found
+                output.append(ip) #returns ip as is if not found in csv file
         else:
             #This is hit when there is not a match based on the IP            
             output.append(ip)
     print(' '.join(output))
-                
