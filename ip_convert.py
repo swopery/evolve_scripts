@@ -8,7 +8,6 @@ Created on Tue Jun 28 13:40:43 2016
 import sys, csv, re, os
 
 DIR = os.path.dirname(os.path.realpath(__file__))    
-ip_lookup = DIR + "/List-Of-IPs.csv"
 regex = re.compile("\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}")
 input_file = sys.stdin.readlines() #handles stdin
 input_list = []
@@ -16,6 +15,11 @@ pairing_dict = {}
 
 for i in input_file:
     input_list.append(i.rstrip()) #chomp newline chars from input_file
+
+if len(sys.argv) > 1: #if argument is given after .py file, becomes ip lookup
+    ip_lookup = sys.argv[1]
+else:
+    ip_lookup = DIR + "/List-Of-IPs.csv"  #default if nothing is given
     
 with open(ip_lookup, 'rb') as csvfile:
     filereader = csv.reader(csvfile)
