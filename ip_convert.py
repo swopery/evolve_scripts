@@ -8,7 +8,7 @@ Created on Tue Jun 28 13:40:43 2016
 import sys, csv, re, os
 
 DIR = os.path.dirname(os.path.realpath(__file__))    
-regex = re.compile("\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}")
+regex = re.compile("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
 input_file = sys.stdin.readlines() #handles stdin
 input_list = []
 pairing_dict = {}
@@ -35,9 +35,10 @@ for line in input_list:
     for ip in words:
         test = regex.match(ip)
         if test:
-            if ip in pairing_dict:
-                host = pairing_dict[ip]
-                output.append(ip.replace(ip,host)) 
+            stripped_ip = regex.search(ip).group() #strips ip of attached stuff
+            if stripped_ip in pairing_dict:
+                host = pairing_dict[stripped_ip]
+                output.append(ip.replace(stripped_ip,host)) 
             else:
                 output.append(ip) #returns ip as is if not found in csv file
         else:
