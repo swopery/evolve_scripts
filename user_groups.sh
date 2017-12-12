@@ -1,4 +1,6 @@
 #!/bin/bash
+#Ryan Swope - Evolve IP
+
 IFS=":"
 while read -r group a gid users
 do
