@@ -1,4 +1,4 @@
-[![Evolve IP](https://www.google.com/search?q=evolve+ip&source=lnms&tbm=isch&sa=X&ved=0ahUKEwifx5nEjIXYAhUHPN8KHdYkBLsQ_AUIDCgD&biw=1440&bih=803#imgrc=cB47wis4NHNVlM:)]
+[![Evolve IP](http://www.greathillpartners.com/wp-content/uploads/2016/06/Evolve-IP.png)]
 
 # Evolve IP scripts
 Here are some samples of bash/Python scripts I wrote for automating small tasks while interning at Evolve IP
