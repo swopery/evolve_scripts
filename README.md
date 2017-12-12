@@ -1,4 +1,4 @@
-[![Evolve IP](http://www.greathillpartners.com/wp-content/uploads/2016/06/Evolve-IP.png)]
+![Evolve IP](http://www.greathillpartners.com/wp-content/uploads/2016/06/Evolve-IP.png)
 
 # Evolve IP scripts
 Here are some samples of bash/Python scripts I wrote for automating small tasks while interning at Evolve IP
